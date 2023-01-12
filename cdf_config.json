@@ -13,11 +13,11 @@
   },
   {
    "name" : "bq.dataset",
-   "value" :"demo_data"
+   "value" :"${dataset_value}"
   },
   {
    "name" : "input.path",
-   "value" : "gs://rds-sample-data/Retail_Data_Transactions_addfield.csv"
+   "value" : "${input_path_value}"
   },
   {
    "name" : "bq.table", 
