@@ -1,0 +1,38 @@
+{
+ "arguments" : [
+  {
+   "name" : "my.recipe",
+   "type" : "array",
+   "value" : [
+    "parse-as-csv :body ',' false",
+    "drop :body",
+    "set-type :body_3 integer",
+    "parse-as-simple-date :body_4 yyyy-MM-dd HH:mm:ss",
+    "set-type :body_5 integer"
+   ]
+  },
+  {
+   "name" : "bq.dataset",
+   "value" :"demo_data"
+  },
+  {
+   "name" : "input.path",
+   "value" : "gs://rds-sample-data/Retail_Data_Transactions_addfield.csv"
+  },
+  {
+   "name" : "bq.table", 
+   "value" : "my_table_macros_add" 
+  },
+  {
+   "name" : "my.schema",
+   "type" : "schema",
+   "value" : [
+    {"name": "body_1", "type": "string", "nullable" : true},
+    {"name": "body_2", "type": "string", "nullable" : true},
+    {"name": "body_3", "type": "int", "nullable" : true},
+    {"name": "body_4", "type": "timestamp", "nullable" : true},
+    {"name": "body_5", "type": "int", "nullable" : true},
+   ]
+  }
+ ]
+}
